@@ -1,19 +1,13 @@
 // Path: backend/config/env/production/database.js
-
-const parse = require('pg-connection-string').parse;
-const config = parse(process.env.DATABASE_URL);
+// KODE BARU YANG LEBIH SIMPEL
 
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
     connection: {
-      host: config.host,
-      port: config.port,
-      database: config.database,
-      user: config.user,
-      password: config.password,
+      connectionString: env('DATABASE_URL'), // Langsung pakai URL dari Render
       ssl: {
-        rejectUnauthorized: false
+        rejectUnauthorized: false // Wajib untuk Neon
       },
     },
     debug: false,
