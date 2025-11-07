@@ -24,7 +24,8 @@
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0",
     "pg": "^8.11.3",
-    "pg-connection-string": "^2.6.2"
+    "pg-connection-string": "^2.6.2",
+    "strapi-provider-upload-cloudinary-v2": "^1.0.3"
   },
   "devDependencies": {
     "@types/node": "^20",
